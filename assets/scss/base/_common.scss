@@ -1,0 +1,30 @@
+
+
+.blind{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+}
+.green{
+  color: $green;
+}
+
+[class*="sc-"] .txt-box{
+  @include about-txt;
+  position: relative;
+  .others{
+    @include other-txt;
+  }
+}
+
+[class*="sc-"] .word{
+  position: relative;
+  display: inline-block;
+  margin-left: 23rem;
+  &::before{
+    @include point;
+  }
+}

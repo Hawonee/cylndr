@@ -1,0 +1,15 @@
+// 공용 적용 스타일 (** 변수 파일 제일 먼저 가지고 오기)
+@import "./utils/var";
+@import "./utils/mixins";
+
+// 기본 세팅: 폰트, 리셋, 재활용 etc
+@import "./base/typo";
+@import "./base/reset";
+@import "./base/common";
+
+// 헤더, 푸터 영역
+@import "./layout/header";
+@import "./layout/footer";
+
+// 해당 메인, 서브 페이지들
+@import "./pages/main";

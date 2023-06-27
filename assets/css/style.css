@@ -1,0 +1,1265 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nanum+Myeongjo:wght@400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+  --color-blue:##35C5F0;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1;
+  font-family: "Noto Sans KR", "Nanum Myeongjo", "Inter", serif;
+  background: #000;
+  font-size: 10px;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+.green {
+  color: #00ff00;
+}
+
+[class*=sc-] .txt-box {
+  font-family: "Inter", serif;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 6.2rem;
+  position: relative;
+}
+[class*=sc-] .txt-box .others {
+  font-family: "Noto Sans KR", serif;
+  letter-spacing: -0.03rem;
+  margin: 7rem auto 0;
+  line-height: 2.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+[class*=sc-] .word {
+  position: relative;
+  display: inline-block;
+  margin-left: 23rem;
+}
+[class*=sc-] .word::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #00ff00;
+  border-radius: 100%;
+  top: 0.4em;
+  left: -0.7em;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 100vh;
+  padding-bottom: 30rem;
+}
+header .inner .video-box {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 20rem;
+}
+header .inner .video-box video {
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 3rem;
+}
+header .inner .deco-txt {
+  letter-spacing: -0.03em;
+  color: #555;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 2rem 0;
+  font-family: "Inter", sans-serif;
+}
+header .inner .deco-txt .flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+header .inner .main-box {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  padding-top: 16rem;
+}
+header .inner .main-box .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115rem;
+  height: 184px;
+}
+header .inner .main-box .latitude-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: -0.05em;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  padding-top: 28rem;
+  font-size: 3.6rem;
+}
+header .inner .main-box .latitude-box span:nth-child(2) {
+  margin-left: 6.5rem;
+}
+header .inner .main-box .time-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  bottom: 3rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  padding: 0 2rem;
+}
+
+footer {
+  position: relative;
+  height: 100%;
+}
+footer .txt-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  padding-top: 25rem;
+  font-family: "Inter", serif;
+}
+footer .txt-box .top-txt {
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  margin-top: 10rem;
+}
+footer .txt-box .mid-txt {
+  text-align: center;
+  width: 100%;
+  letter-spacing: -0.05em;
+  font-size: 16rem;
+  font-weight: 600;
+  line-height: 19rem;
+  white-space: nowrap;
+  margin-top: 28rem;
+}
+footer .txt-box .bottom-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  letter-spacing: -0.05em;
+  padding: 0 4rem;
+  font-size: 1.9rem;
+  font-weight: 300;
+  line-height: 2rem;
+  position: absolute;
+  bottom: 3rem;
+}
+footer .txt-box .bottom-txt a {
+  color: #00ff00;
+}
+
+.main {
+  position: relative;
+  padding-top: 200vh;
+}
+.main .video-box {
+  position: absolute;
+  top: 150px;
+  height: calc(200vh + 400px);
+}
+.main .video-box video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gnb {
+  position: absolute;
+  top: 100vh;
+  display: flex;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100vh;
+  width: 100%;
+}
+.gnb .btn-top {
+  display: block;
+  width: 42px;
+  height: 42px;
+  background: #00ff00;
+  border-radius: 100%;
+}
+.gnb .gnb-list {
+  margin: 2rem 0;
+}
+.gnb .gnb-list .gnb-item {
+  color: #fff;
+}
+.gnb .gnb-list .gnb-item a {
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-family: "Inter", serif;
+  line-height: 2.2rem;
+  letter-spacing: -0.05em;
+}
+.gnb .gnb-list .gnb-item.on {
+  color: #00ff00;
+}
+
+[data-motion=text] {
+  padding-left: 17.7%;
+}
+[data-motion=text] > * {
+  display: flex;
+  overflow: hidden;
+  gap: 10px;
+}
+[data-motion=text] .others {
+  padding-left: 28.69%;
+}
+
+.sc-aboutus {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 45rem;
+}
+.sc-aboutus .area1 {
+  margin-bottom: 49rem;
+}
+.sc-aboutus .area2 {
+  margin-bottom: 46rem;
+}
+.sc-aboutus .area2 .bg-img-list {
+  display: flex;
+  padding-left: calc(50% - 28rem);
+  position: relative;
+  margin: 0 auto -9rem;
+  overflow: hidden;
+}
+.sc-aboutus .area2 .bg-img-list .img-item {
+  padding-right: 30rem;
+}
+.sc-aboutus .area2 .bg-img-list .img-item img {
+  border-radius: 30px;
+  opacity: 0.6;
+}
+.sc-aboutus .area2 .txt-box {
+  padding-left: 14%;
+  position: relative;
+}
+.sc-aboutus .area2 .txt-box .others {
+  padding-left: 42%;
+}
+.sc-aboutus .area3 .txt-box {
+  padding-left: 49.27%;
+}
+.sc-aboutus .area3 .txt-box .word {
+  margin-left: 16rem;
+}
+.sc-aboutus .area3 .txt-box .others {
+  padding-left: 0;
+}
+.sc-aboutus .area4 .bg-wrap {
+  padding: 25rem 0 30rem;
+  margin-bottom: 60rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt {
+  position: relative;
+  letter-spacing: -0.03em;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 22rem;
+  font-weight: 300;
+  line-height: 22rem;
+  left: 50%;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(1) {
+  margin-left: -70rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(2) {
+  margin-left: -34rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(3) {
+  margin-left: -97rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(4) {
+  margin-left: -25rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(5) {
+  margin-left: -7rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(6) {
+  margin-left: -98rem;
+}
+.sc-aboutus .area4 .bg-wrap .txt:nth-child(7) {
+  margin-left: -5rem;
+}
+.sc-aboutus .area4 .seoul-wrap {
+  position: relative;
+}
+.sc-aboutus .area4 .seoul-wrap .img-box img {
+  border-radius: 3rem;
+  margin: 0 auto;
+  opacity: 0.6;
+}
+.sc-aboutus .area4 .seoul-wrap .img-txt {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sc-aboutus .area4 .seoul-wrap .img-txt .txt {
+  padding-top: 4rem;
+  margin-bottom: 37rem;
+  letter-spacing: -0.02em;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.sc-aboutus .area4 .seoul-wrap .img-txt .head {
+  margin-top: 52rem;
+  letter-spacing: -0.03em;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 17rem;
+  margin-bottom: 2rem;
+  line-height: 16rem;
+}
+.sc-aboutus .area4 .seoul-wrap .img-txt .head .green {
+  font-family: "Inter", serif;
+  font-weight: 500;
+}
+.sc-aboutus .area4 .seoul-wrap .img-txt .sub {
+  font-family: "Inter", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+}
+.sc-aboutus .area4 .seoul-wrap .img-txt .time {
+  margin-top: 0;
+  font-family: "Inter", serif;
+  font-weight: 500;
+}
+.sc-aboutus .area5 {
+  position: relative;
+  margin-bottom: 25rem;
+}
+.sc-aboutus .area5 .bg-list {
+  display: flex;
+  width: 82.7rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.sc-aboutus .area5 .bg-list .bg-item img {
+  border-radius: 3rem;
+  width: 82.7rem;
+  margin: 0 auto;
+}
+.sc-aboutus .area5 .txt-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sc-aboutus .area5 .txt-box .line-box {
+  padding-left: 18%;
+}
+.sc-aboutus .area5 .txt-box .sub {
+  font-family: "Inter", serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+  padding: 6rem;
+}
+.sc-aboutus .area5 .txt-box .word {
+  margin-left: 16rem;
+}
+.sc-aboutus .area5 .txt-box .others {
+  padding-left: 40%;
+}
+.sc-aboutus .area6 {
+  padding-bottom: 40rem;
+}
+.sc-aboutus .area6 .team-list {
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+}
+.sc-aboutus .area6 .team-list .team-item {
+  position: relative;
+  display: flex;
+  padding: 8rem 0 9rem 0;
+}
+.sc-aboutus .area6 .team-list .team-item::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sc-aboutus .area6 .team-list .team-item .team-box {
+  width: 50%;
+  padding: 0 3rem;
+  font-family: "Inter", serif;
+}
+.sc-aboutus .area6 .team-list .team-item .team-box:nth-child(2) {
+  padding-left: 0;
+}
+.sc-aboutus .area6 .team-list .team-item .team-box em {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+.sc-aboutus .area6 .team-list .team-item .team-box .info1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.04em;
+}
+.sc-aboutus .area6 .team-list .team-item .team-box .info2 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+  line-height: 2.6rem;
+  letter-spacing: -0.04em;
+}
+.sc-aboutus .area6 .team-list .team-item .team-box .info3 {
+  font-family: "Noto sans KR", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+  letter-spacing: -0.04em;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.area7 {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 2;
+}
+.area7 .circle {
+  position: absolute;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 5vmax;
+  width: 5vmax;
+  background-color: rgb(32, 32, 201);
+}
+.area7 .circle-head {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  width: 151rem;
+  height: 100%;
+}
+.area7 .circle-box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.area7 .circle-box .from-to {
+  width: 50%;
+  position: relative;
+  font-family: "Inter", serif;
+  font-size: 2.2em;
+  line-height: 2.8rem;
+  font-weight: 300;
+  opacity: 0;
+}
+.area7 .circle-box .from-to.on {
+  opacity: 1;
+}
+.area7 .circle-box .from-to em {
+  display: block;
+  position: absolute;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 6rem;
+  transition: opacity 0.1s ease-in-out;
+  line-height: 7.2rem;
+  opacity: 0;
+}
+.area7 .circle-box .from-to em.on {
+  opacity: 1;
+}
+.area7 .circle-bottom {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-align: center;
+  transform: translateX(-50%);
+  width: 100%;
+  color: #000;
+  font-family: "Inter", serif;
+}
+
+.area8 {
+  padding-top: 56rem;
+  position: relative;
+  z-index: 2;
+}
+.area8 .bg-wrap .txt {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  letter-spacing: -0.03em;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 22rem;
+  font-weight: 300;
+  line-height: 22rem;
+  white-space: nowrap;
+}
+.area8 .bg-wrap .txt1 > small {
+  letter-spacing: -0.06em;
+  margin-left: 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 4.6rem;
+  font-weight: 300;
+}
+.area8 .bg-wrap .txt4 > small {
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0 5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+.area8 .bg-wrap .txt5 > small {
+  letter-spacing: -0.06em;
+  color: #fff;
+  text-align: left;
+  margin-right: 9rem;
+  font-family: "Inter", sans-serif;
+  font-size: 4.6rem;
+  font-weight: 300;
+  line-height: 4.2rem;
+  position: relative;
+}
+.area8 .bg-wrap .txt6 > small {
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-align: center;
+  margin-left: 16rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.stiky-area {
+  position: relative;
+  height: 900vh;
+}
+
+.area9 {
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  background: #000;
+}
+.area9 .container {
+  display: flex;
+}
+.area9 .container .img-wrapper {
+  width: 100%;
+}
+.area9 .container .img-box {
+  padding: 3rem 2rem;
+  width: 30vw;
+}
+.area9 .container .img-box .wrap {
+  position: relative;
+  height: 100%;
+  height: 100vh;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+.area9 .container .img-box img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+.area9 .container .img-box img.img1 {
+  z-index: 3;
+}
+.area9 .container .img-box img.img2 {
+  z-index: 2;
+}
+.area9 .container .img-box img.img3 {
+  z-index: 1;
+}
+.area9 .container .txt-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 10rem;
+  margin-left: 5rem;
+}
+.area9 .container .txt-box .word {
+  margin-left: 10rem;
+}
+
+.area10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%;
+  z-index: 3;
+  background: #00ff00;
+  overflow: hidden;
+  border-radius: 0 5rem 5rem 0;
+  display: flex;
+  padding-left: 30rem;
+}
+.area10 .con1 {
+  width: 221.3rem;
+}
+.area10 .con2 {
+  width: 209rem;
+}
+.area10 .con3 {
+  width: 280rem;
+}
+.area10 .container {
+  position: relative;
+  height: 100vh;
+  color: #000;
+}
+.area10 .container > * {
+  position: absolute;
+}
+.area10 .container img {
+  border-radius: 3rem;
+}
+.area10 .container figcaption {
+  letter-spacing: -0.03em;
+  text-align: right;
+  margin-top: 1.4rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+.area10 .container .set-box .set-head {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 20rem;
+  font-weight: 300;
+  line-height: 18rem;
+  letter-spacing: -0.01em;
+  z-index: 1;
+  position: relative;
+}
+.area10 .container .set-box .set-other {
+  display: block;
+  font-family: "Inter", serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+}
+.area10 .container .set-box .set-other.first {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+.area10 .container .set-box .set-other1 {
+  display: block;
+  font-family: "Noto Sans KR", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+  letter-spacing: -0.03em;
+  margin-top: 3rem;
+}
+.area10 .container .set1 {
+  height: 56.5rem;
+  max-height: 96%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 4rem;
+  display: flex;
+  bottom: 4%;
+  left: 4rem;
+}
+.area10 .container .set2 {
+  display: flex;
+  height: 86rem;
+  max-height: 91%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 4rem;
+  top: 9%;
+  left: 87rem;
+}
+.area10 .container .set2 .img1 {
+  margin: 0 auto;
+}
+.area10 .container .set3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 94rem;
+  max-height: 90%;
+  padding-bottom: 4rem;
+  top: 10%;
+  left: 15rem;
+}
+.area10 .container .set3 .set-head {
+  margin-left: 8rem;
+}
+.area10 .container .set3 .set-head small {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: -0.06em;
+  margin-top: 20px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 4.6rem;
+  font-weight: 300;
+  line-height: 4.2rem;
+  margin-left: 14rem;
+}
+.area10 .container .img2 {
+  width: 67rem;
+  top: 11%;
+  left: 112rem;
+}
+.area10 .container .set4 {
+  display: flex;
+  height: 80rem;
+  max-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -16%;
+  top: 50%;
+  left: 76rem;
+  z-index: 1;
+}
+.area10 .container .set4 .set-head {
+  display: flex;
+  flex-direction: column;
+}
+.area10 .container .set4 .set-head span {
+  display: block;
+}
+.area10 .container .set4 .set-head span:nth-child(2) {
+  padding-left: 20rem;
+}
+.area10 .container .set4 .set-head span:nth-child(3) {
+  margin-left: -10rem;
+}
+.area10 .container .set4 .span-box {
+  padding-left: 20rem;
+}
+.area10 .container .img3 {
+  width: 37rem;
+  bottom: 5%;
+  left: 45.5rem;
+}
+.area10 .container .img4 {
+  z-index: 2;
+  width: 67.4rem;
+  top: 22%;
+  left: 185rem;
+}
+
+.area11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.area11 .container .vid-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.area11 .container .vid-wrap video {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.area11 .container .vid-wrap .txt-box {
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.area11 .container .vid-wrap .txt-box .txt1 {
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 4rem;
+}
+.area11 .container .vid-wrap .txt-box .txt2 {
+  font-family: "Inter", serif;
+  letter-spacing: -0.07em;
+  color: #fff;
+  padding-left: 10rem;
+  font-size: 20rem;
+  font-weight: 500;
+  line-height: 22rem;
+  display: inline-block;
+}
+.area11 .container .vid-wrap .txt-box .txt3 {
+  font-family: "Nanum Myeongjo", serif;
+  letter-spacing: -0.1em;
+  color: #fff;
+  margin-bottom: 3rem;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 3.4rem;
+  margin-top: 8rem;
+}
+.area11 .container .vid-wrap .txt-box .txt4 {
+  font-family: "Noto Sans KR", serif;
+  letter-spacing: -0.1em;
+  color: #fff;
+  font-family: Noto, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2rem;
+}
+.area11 .container .vid-wrap .txt-box > canvas {
+  width: 8rem;
+  vertical-align: top;
+  margin-left: 2rem;
+  display: inline-block;
+  position: relative;
+  bottom: -3rem;
+}
+
+.area12 {
+  position: relative;
+  margin-bottom: 30rem;
+  padding-top: 15rem;
+  text-align: center;
+  background: #f00;
+}
+.area12 .top-txt {
+  position: relative;
+  z-index: 3;
+  font-size: 13rem;
+  font-weight: 400;
+  line-height: 11rem;
+  padding-bottom: 180rem;
+}
+.area12 .top-txt .font {
+  font-family: "Nanum Myeongjo", serif;
+}
+.area12 .img-box {
+  position: absolute;
+  top: 42rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65rem;
+  height: auto;
+}
+.area12 .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 100%;
+}
+.area12 .deco-txt {
+  position: relative;
+  z-index: 1px;
+  text-align: center;
+}
+.area12 .deco-txt .thx {
+  position: absolute;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 48rem;
+  line-height: 55rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 500;
+}
+.area12 .deco-txt .flex-box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110rem;
+  letter-spacing: -0.02em;
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-family: "Inter", serif;
+}
+.area12 .deco-txt .flex-box .flex1 {
+  display: flex;
+  justify-content: space-between;
+}
+.area12 .deco-txt .flex-box .flex2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.area13 {
+  margin-bottom: 54rem;
+}
+.area13 .txt-box {
+  padding-left: 39.58%;
+}
+.area13 .txt-box .line1 .word {
+  display: block;
+  margin-left: 20rem;
+}
+.area13 .others {
+  padding-left: 33%;
+}
+
+.area14 {
+  margin-bottom: 27rem;
+  position: relative;
+}
+.area14 .head {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 18rem;
+  line-height: 16rem;
+  letter-spacing: -0.05em;
+  margin-left: 16rem;
+  margin-bottom: 140rem;
+}
+.area14 .img1 {
+  width: 79rem;
+  position: absolute;
+  top: 55rem;
+  right: 50%;
+}
+.area14 .img2 {
+  width: 38.4rem;
+  margin-left: 39.6rem;
+  position: absolute;
+  top: 116rem;
+  left: 50%;
+}
+.area14 .img3 {
+  width: 89.2rem;
+  margin-left: -19.2rem;
+  position: absolute;
+  top: 235rem;
+  left: 50%;
+}
+.area14 .img4 {
+  width: 34.5rem;
+  margin-right: 42.1rem;
+  position: absolute;
+  top: 270rem;
+  right: 50%;
+}
+.area14 figcaption {
+  text-align: right;
+  margin-top: 1.4rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.area14 .des {
+  display: block;
+  margin-left: -69rem;
+  position: absolute;
+  top: 134rem;
+  left: 50%;
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 2.8rem;
+  font-family: "Inter", serif;
+}
+.area14 .head2 {
+  text-align: right;
+  margin-right: 16rem;
+  margin-bottom: 92rem;
+}
+.area14 .txt-box {
+  padding-left: 39%;
+}
+.area14 .txt-box .word {
+  margin-left: 20rem;
+}
+.area14 .txt-box .others {
+  padding-left: 15%;
+}
+
+.sc-work {
+  margin-bottom: 36rem;
+  position: relative;
+}
+.sc-work .tit-box {
+  position: relative;
+  height: 100vh;
+}
+.sc-work .tit-box .main-tit {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sc-work .tit-box .main-tit h2 {
+  font-family: "Inter", serif;
+  font-size: 32rem;
+  font-weight: 500;
+  line-height: 30rem;
+  letter-spacing: -0.05em;
+}
+.sc-work .tit-box .main-tit p {
+  font-family: "Nanum Myeongjo", serif;
+  color: #000;
+  letter-spacing: -0.05em;
+  line-height: 18rem;
+  font-size: 18rem;
+  line-height: 18rem;
+  -webkit-text-stroke: 1px #fff;
+}
+.sc-work .work-list {
+  position: relative;
+}
+.sc-work .work-list .work-item {
+  position: sticky;
+  top: 0;
+}
+.sc-work .work-list .work-item .txt-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Inter", serif;
+  white-space: nowrap;
+  letter-spacing: -0.2em;
+}
+.sc-work .work-list .work-item .txt-box h3 {
+  font-size: 15rem;
+  font-weight: 600;
+  line-height: 16rem;
+}
+.sc-work .work-list .work-item .txt-box p {
+  font-size: 3.4rem;
+  margin-top: 3rem;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
+
+.sc-recuit {
+  padding: 30rem 0 35rem;
+  background: #000;
+}
+.sc-recuit .container {
+  max-width: 132rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.sc-recuit .container .main-txt {
+  position: relative;
+  margin-bottom: 19rem;
+}
+.sc-recuit .container .main-txt .headline {
+  font-size: 16rem;
+  font-weight: 400;
+  font-family: "Nanum Myeongjo", serif;
+  line-height: 22rem;
+  letter-spacing: -0.08em;
+  margin: 0 5rem;
+}
+.sc-recuit .container .main-txt .headline .line1 {
+  display: block;
+}
+.sc-recuit .container .main-txt .headline .line2 {
+  display: block;
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+.sc-recuit .container .main-txt .deco-txt {
+  position: absolute;
+  top: 17rem;
+  left: 2rem;
+  font-family: "Inter", serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  letter-spacing: -0.04em;
+  color: #555;
+  margin-left: 5rem;
+}
+.sc-recuit .container .main-txt .card {
+  width: 38.8rem;
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sc-recuit .container .main-txt .link-mail {
+  display: block;
+  text-align: right;
+  margin-right: 5rem;
+  font-size: 1.8rem;
+  line-height: 1.8em;
+  letter-spacing: -0.02em;
+  font-family: "Inter", serif;
+}
+.sc-recuit .container .recuit-list {
+  border-top: 1px solid #555;
+}
+.sc-recuit .container .recuit-list .recuit-item {
+  position: relative;
+  padding: 7rem 0;
+  border-bottom: 1px solid #555;
+}
+.sc-recuit .container .recuit-list .recuit-item a {
+  letter-spacing: -0.02em;
+  padding-left: 2rem;
+  font-family: "Inter", serif;
+  font-size: 5.4rem;
+  font-weight: 600;
+}
+.sc-recuit .container .recuit-list .recuit-item .line {
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #fff) 0 100%;
+  transition: all 0.5s ease-in-out;
+}
+.sc-recuit .container .recuit-list .recuit-item:hover .line {
+  width: 100%;
+}
+
+.awwwards {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
