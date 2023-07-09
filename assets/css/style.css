@@ -57,6 +57,10 @@ ul {
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .blind {
   position: absolute;
   width: 1px;
@@ -253,8 +257,8 @@ footer .txt-box .bottom-txt a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.gnb {
+.main .gnb {
+  border: 1px solid;
   position: absolute;
   top: 100vh;
   display: flex;
@@ -263,28 +267,26 @@ footer .txt-box .bottom-txt a {
   align-items: flex-end;
   height: 100vh;
   width: 100%;
+  padding: 2rem;
 }
-.gnb .btn-top {
+.main .gnb .btn-top {
   display: block;
   width: 42px;
   height: 42px;
   background: #00ff00;
   border-radius: 100%;
 }
-.gnb .gnb-list {
-  margin: 2rem 0;
-}
-.gnb .gnb-list .gnb-item {
+.main .gnb .gnb-list .gnb-item {
   color: #fff;
 }
-.gnb .gnb-list .gnb-item a {
+.main .gnb .gnb-list .gnb-item a {
   font-size: 1.6rem;
   font-weight: 300;
   font-family: "Inter", serif;
   line-height: 2.2rem;
   letter-spacing: -0.05em;
 }
-.gnb .gnb-list .gnb-item.on {
+.main .gnb .gnb-list .gnb-item.on {
   color: #00ff00;
 }
 
@@ -423,6 +425,13 @@ footer .txt-box .bottom-txt a {
   margin-top: 0;
   font-family: "Inter", serif;
   font-weight: 500;
+}
+.sc-aboutus .area4 .seoul-wrap .box-clock {
+  width: 190rem;
+  margin-left: -95rem;
+  position: absolute;
+  top: 18rem;
+  left: 50%;
 }
 .sc-aboutus .area5 {
   position: relative;
@@ -721,7 +730,6 @@ footer .txt-box .bottom-txt a {
   overflow: hidden;
   border-radius: 0 5rem 5rem 0;
   display: flex;
-  padding-left: 30rem;
 }
 .area10 .con1 {
   width: 221.3rem;
@@ -882,6 +890,7 @@ footer .txt-box .bottom-txt a {
   left: 0;
   width: 100%;
   height: 100vh;
+  background-color: red;
 }
 .area11 .container .vid-wrap {
   position: absolute;
@@ -957,7 +966,6 @@ footer .txt-box .bottom-txt a {
   margin-bottom: 30rem;
   padding-top: 15rem;
   text-align: center;
-  background: #f00;
 }
 .area12 .top-txt {
   position: relative;

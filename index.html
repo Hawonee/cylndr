@@ -9,11 +9,9 @@
   </head>
 
   <body>
-    <div class="wrapper"> 
-      
-      <header class="header">
+    <div class="wrapper">
+      <header class="header" id="header">
         <div class="inner">
-         
           <div class="deco-txt">
             <div class="flex">
               <span>RUNNING</span>
@@ -45,24 +43,42 @@
               <span>SEOUL</span>
             </div>
           </div>
-            <div class="main-box">
+          <div class="main-box">
             <h1 class="logo">
-              <img src="http://cylndr.co.kr/assets/images/header-logo.664fbafa.svg" alt="CYLNDR" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="1451" height="242" viewBox="0 0 1451 242">
+                <path
+                  fill-rule="evenodd"
+                  fill="#FFF"
+                  d="m1398.15 140.193 52.75 100.256h-85.46l-42.08-86.774h-28.28v86.774h-76.18V.951h145.13c17 0 31.54 3.306 43.6 9.922 12.07 6.611 21.15 15.552 27.24 26.804 6.08 11.257 9.13 23.497 9.13 36.726 0 14.619-3.91 27.846-11.72 39.684-7.81 11.833-19.19 20.537-34.13 26.106Zm-38.65-77.558c-4.09-4.098-9.09-6.148-15-6.148h-49.42v43.388h49.42c5.91 0 10.91-2.105 15-6.322 4.09-4.211 6.13-9.394 6.13-15.544s-2.04-11.274-6.13-15.374Zm-284.96 177.814H971.917V2.689h102.623c82.88 0 124.32 39.628 124.32 118.88 0 79.254-41.44 118.88-124.32 118.88Zm48.01-130.945c0-34.185-15.9-51.279-47.68-51.279h-25.04V181.44h25.04c31.78 0 47.68-17.086 47.68-51.282v-20.654Zm-339.716 15.519v115.426h-70.988V2.689h67.249l100.698 117.152V2.689h70.988v237.76h-67.25L782.834 125.023ZM494.298 1.918h76.182v176.051h121.198v62.48h-197.38V1.918ZM382.723 240.643h-76.182v-94.381L213.658 1.72h86.419l44.91 79.063h1.361L391.259 1.72h84.191l-92.727 145.396v93.527ZM161.512 92.648c-9.059-13.148-24.175-21.781-41.321-21.781-28.794 0-51.927 24.293-50.114 53.545 1.592 25.707 22.933 46.349 48.618 47.098 18.198.53 34.272-8.666 43.492-22.769h74.999c-12.432 53.266-60.064 92.953-116.995 92.953-67.045 0-121.269-55.015-120.197-122.462C1.007 55.55 52.213 3.098 115.712.789c58.533-2.135 108.099 37.717 121.232 91.859h-75.432Z"
+                />
+              </svg>
             </h1>
-              <div class="latitude-box">
-                <span>(0000000)</span>
-                <span>SEOUL</span>
-              </div>
-              <div class="time-box">
-                <span>WORLDWIDE</span>
-                <span>©2022</span>
-                <span class="time">00:00:00</span>
-              </div>
+            <div class="time-box">
+              <span>WORLDWIDE</span>
+              <span>©2022</span>
+              <span class="time">00:00:00</span>
             </div>
+          </div>
         </div>
       </header>
 
-      <nav class="gnb">
+      <script>
+        // const showNav = gsap.to(".gnb", {
+        //     yPercent: -100,
+        //     paused: true,
+        //     duration: 0.2
+        // }).progress(1);
+
+        // ScrollTrigger.create({
+        //     start: "top top",
+        //     end: 99999,
+        //     onUpdate: (self) => {
+        //         self.direction === -1 ? showNav.play() : showNav.reverse();
+        //     }
+        // });
+      </script>
+
+      <!-- <nav class="gnb">
         <a href="" class="btn-top"><span class="blind">상단으로 가기</span></a>
         <div class="inner">
           <ul class="gnb-list">
@@ -71,21 +87,27 @@
             <li class="gnb-item"><a href="#sc-recruit">RECRUIT</a></li>
           </ul>
         </div>
-      </nav>
-    
+      </nav> -->
 
       <main class="main">
+        <div class="video-box">
+          <video preload="metadata" loop="" muted="" playsinline="" autoplay="">
+            <source src="http://cylndr.co.kr/assets/videos/header-video1-pc.5d9f90a5.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-         <div class="video-box">
-            <video  preload="metadata" loop="" muted="" playsinline="" autoplay="">
-              <source src="http://cylndr.co.kr/assets/videos/header-video1-pc.5d9f90a5.mp4" type="video/mp4" />
-            </video>
+        <nav class="gnb">
+          <a href="" class="btn-top"><span class="blind">상단으로 가기</span></a>
+          <div class="inner">
+            <ul class="gnb-list">
+              <li class="gnb-item on"><a href="#sc-aboutus">ABOUT US</a></li>
+              <li class="gnb-item"><a href="#sc-work">WORK</a></li>
+              <li class="gnb-item"><a href="#sc-recruit">RECRUIT</a></li>
+            </ul>
           </div>
+        </nav>
 
-       
-
-
-        <section class="sc-aboutus">
+        <section class="sc-aboutus" id="sc-aboutus">
           <div class="inner">
             <h2 class="blind">About us, CYLNDR 소개</h2>
             <div class="area1">
@@ -164,9 +186,7 @@
                 <p class="txt left">BUCHAREST</p>
                 <p class="txt right">DURHAM</p>
               </div>
-              <div class="circle-wrap">
-                <!-- 어떻게 하는 거죠 -->
-              </div>
+              <div class="circle-wrap"></div>
               <div class="seoul-wrap">
                 <div class="img-box">
                   <picture>
@@ -193,6 +213,53 @@
                     SPECIALIZED IN DIGITAL STRATEGIES
                   </p>
                 </div>
+                <div class="box-clock">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1900" viewBox="0 0 1900 1900">
+                    <defs>
+                      <filter id="svg-filter-shadow" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#000" flood-opacity="1"></feDropShadow></filter>
+                    </defs>
+                    <style>
+                      .svg-clock-minute,
+                      .svg-clock-hour,
+                      .svg-clock-second {
+                        transform-origin: 50%;
+                        transform: rotate(0);
+                      }
+                      .svg-group-minute,
+                      .svg-group-hour,
+                      .svg-group-second {
+                        transform-origin: 50%;
+                        animation-name: rotate;
+                        animation-iteration-count: infinite;
+                        transform: rotate(0);
+                      }
+                      .svg-group-minute {
+                        animation-duration: 3600s;
+                        animation-timing-function: linear;
+                      }
+                      .svg-group-hour {
+                        animation-duration: 43200s;
+                        animation-timing-function: linear;
+                      }
+                      .svg-group-second {
+                        animation-duration: 60s;
+                        animation-timing-function: steps(60, end);
+                      }
+                      @keyframes rotate {
+                        0% {
+                          transfrom: rotate(0deg);
+                        }
+                        to {
+                          transform: rotate(360deg);
+                        }
+                      }
+                    </style>
+                    <g class="svg-group-minute"><rect class="svg-clock-minute" x="944" y="178" width="12" height="780" rx="5" ry="5" fill="#fff" style="transform: rotate(234.81666666666666deg)"></rect></g>
+                    <g class="svg-group-hour"><path class="svg-clock-hour" d="M960 956h-20V266c0-5.52 4.48-10 10-10s10 4.48 10 10v690Z" fill="#fff" style="transform: rotate(79.5deg)"></path></g>
+                    <g class="svg-group-second"><rect class="svg-clock-second" x="947.5" y="33" width="5" height="1000" rx="2" ry="2" fill="#0ef60e" style="transform: rotate(294deg)"></rect></g>
+                    <circle cx="950" cy="950" r="30" fill="#fff" filter="url('#svg-filter-shadow')"></circle>
+                  </svg>
+                </div>
               </div>
             </div>
             <div class="area5">
@@ -201,19 +268,25 @@
                   <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/4.5eb0bd8f.jpg" alt />
                 </li>
                 <li class="bg-item">
-                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/1.f8233353.jpg" alt />
+                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/2.455bf2ca.jpg" alt />
+                </li>
+                <li class="bg-item">
+                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/3.a3c36fcc.jpg" alt />
                 </li>
                 <li class="bg-item">
                   <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/4.5eb0bd8f.jpg" alt />
                 </li>
                 <li class="bg-item">
-                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/4.5eb0bd8f.jpg" alt />
+                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/6.68adfd85.jpg" alt />
                 </li>
                 <li class="bg-item">
-                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/1.f8233353.jpg" alt />
+                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/7.156ab378.jpg" alt />
                 </li>
                 <li class="bg-item">
-                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/4.5eb0bd8f.jpg" alt />
+                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/9.ab9a3355.jpg" alt />
+                </li>
+                <li class="bg-item">
+                  <img src="http://cylndr.co.kr/assets/images/aboutus-area6-image-pc/7.156ab378.jpg" alt />
                 </li>
               </ul>
               <div class="txt-box">
@@ -324,36 +397,13 @@
                   <em>Result</em>
                 </div>
               </div>
-              <!-- <div class="circle-box box2">
-                <div class="from txt1">
-                  <span>from</span>
-                  <br />
-                  <em>Creative</em>
-                </div>
-                <div class="to txt2">
-                  <span>to</span>
-                  <br />
-                  <em>Reliability</em>
-                </div>
-              </div>
-              <div class="circle-box box3">
-                <div class="from txt1">
-                  <span>from</span>
-                  <br />
-                  <em>Challenge</em>
-                </div>
-                <div class="to txt2">
-                  <span>to</span>
-                  <br />
-                  <em>Result</em>
-                </div> -->
               <p class="circle-bottom">
                 From beginning to end, our essence and fundamental values are represented with
                 <br />
                 seemingly opposing yet synergetic expressions.
               </p>
             </div>
-            <div class="area8">
+            <div class="area8" data-bgcolor="#2020c9">
               <div class="bg-wrap">
                 <p class="txt txt1 right">NEW ENGINE <small>(RAPID)</small></p>
                 <p class="txt txt2 left">RUNNING ON A CIRCUIT.</p>
@@ -370,173 +420,163 @@
                 <p class="txt txt7 right">37°34’00”N 126°58’41”E</p>
               </div>
             </div>
-
-            
-
-    
-
-              <div class="area9">
-                <div class="container">
-                  <div class="img-wrapper">
-                    <div class="img-box img-scale">
-                      <div class="wrap">
-                        <picture>
-                          <img src="http://cylndr.co.kr/assets/images/aboutus-area9-image-pc/1.6174f75f.jpg" class="img1" alt />
-                        </picture>
-                        <picture>
-                          <img src="http://cylndr.co.kr/assets/images/aboutus-area9-image-pc/2.70a65c51.jpg" class="img2" alt />
-                        </picture>
-                        <picture>
-                          <img src="http://cylndr.co.kr/assets/images/aboutus-area9-image-pc/3.2be44af7.jpg" class="img3" alt />
-                        </picture>
-                      </div>
+            <div class="area9">
+              <div class="container">
+                <div class="img-wrapper">
+                  <div class="img-box img-scale">
+                    <div class="wrap">
+                      <picture>
+                        <img src="http://cylndr.co.kr/assets/images/aboutus-area9-image-pc/1.6174f75f.jpg" class="img1" alt />
+                      </picture>
+                      <picture>
+                        <img src="http://cylndr.co.kr/assets/images/aboutus-area9-image-pc/2.70a65c51.jpg" class="img2" alt />
+                      </picture>
+                      <picture>
+                        <img src="http://cylndr.co.kr/assets/images/aboutus-area9-image-pc/3.2be44af7.jpg" class="img3" alt />
+                      </picture>
                     </div>
                   </div>
-                  <div class="txt-box">
-                    <div class="line1"><span class="word">We</span> <span class="green">aim for</span> effective horizontal communication</div>
-                    <div class="line2">that is also reasonable. We reward transparent result</div>
-                    <div class="line3">and performance through fair evaluation. We <span class="green">grow</span></div>
-                    <div class="line4">with the <span class="green">common goals</span> of companies and individuals.</div>
-                    <p class="others">우리는 수평적이고 합리적인 커뮤니케이션을 지향하고, 투명한 성과 측정과 공정한<br />평가를 통해 포상하며, 공동의 목표를 가지고 기업과 개인이 함께 성장합니다.</p>
+                </div>
+                <div class="txt-box">
+                  <div class="line1"><span class="word">We</span> <span class="green">aim for</span> effective horizontal communication</div>
+                  <div class="line2">that is also reasonable. We reward transparent result</div>
+                  <div class="line3">and performance through fair evaluation. We <span class="green">grow</span></div>
+                  <div class="line4">with the <span class="green">common goals</span> of companies and individuals.</div>
+                  <p class="others">우리는 수평적이고 합리적인 커뮤니케이션을 지향하고, 투명한 성과 측정과 공정한<br />평가를 통해 포상하며, 공동의 목표를 가지고 기업과 개인이 함께 성장합니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="stiky-area">
+              <div class="inner">
+                <div class="area10">
+                  <!-- <div class="horizon"> -->
+                  <div class="container con1">
+                    <div class="set-box set1">
+                      <p class="set-head">CYLNDR<br />CORP.</p>
+                      <span class="set-other first">CYLNDR CONVERTS BRAND POTENTIAL INTO TRENDSETTING ENERGY TO POWER<br />GLOBAL MARKETS AND CULTURES AT FULL THROTTLE.</span>
+                    </div>
+                    <div class="set-box set2">
+                      <p class="set-head">METHOD&<br />IDENTITY</p>
+                      <figure class="img1">
+                        <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img1-pc.7aa73891.jpg" alt />
+                        <figcaption>OUR OFFICE</figcaption>
+                      </figure>
+                    </div>
+                    <canvas id="aboutusArea11Canvas1" width="1000" height="1000"></canvas>
+                    <canvas id="aboutusArea11Canvas2" width="1000" height="1000"></canvas>
+                  </div>
+                  <div class="container con2">
+                    <div class="set-box set3">
+                      <div class="span-box">
+                        <span class="set-other">
+                          The digital environment and technology are changing<br />
+                          rapidly, and yesterday's knowledge cannot beat today's<br />
+                          competitors. We boldly challenge new proposals based<br />
+                          on our expertise and diverse experience in digital<br />
+                          technology and marketing trends.
+                        </span>
+                        <span class="set-other1">
+                          디지털 환경과 기술은 빠르게 변화하고 있고, 어제의 지식으로는 오늘의 경쟁자를<br />
+                          이길 수 없습니다. 우리는 디지털 기술과 마케팅 트렌드에 대한 전문 지식과 다양한<br />
+                          경험을 바탕으로 새로운 제안에 과감히 도전합니다.
+                        </span>
+                      </div>
+                      <p class="set-head">CREATIVE<br /><small>(2020)</small>EXPERTS</p>
+                    </div>
+                    <figure class="img2">
+                      <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img2-pc.c5461f75.jpg" alt />
+                      <figcaption>RELAXED ENVIRONMENT</figcaption>
+                    </figure>
+                    <canvas id="aboutusArea11Canvas3" width="1000" height="1000"></canvas>
+                  </div>
+                  <div class="container con3">
+                    <div class="set-box set4">
+                      <p class="set-head">
+                        <span>SALES</span>
+                        <span>DRIVEN</span>
+                        <span>MARKETING</span>
+                      </p>
+                      <div class="span-box">
+                        <span class="set-other">
+                          CYLNDR’s optimized production of Sales Driven<br />
+                          Marketing content aims to substantially help to growth<br />
+                          of our clients’ businesses.
+                        </span>
+                        <span class="set-other1">
+                          실린더가 최적화의 제작 프로세스로 만들어내는 Sales Driven Marketing<br />
+                          콘텐츠들은 클라이언트의 비즈니스 성장에 실질적인 도움을 주는 것을 목표로 합니다.
+                        </span>
+                      </div>
+                    </div>
+                    <figure class="img3">
+                      <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img3-pc.ba19f456.jpg" alt />
+                      <figcaption>IDEATION</figcaption>
+                    </figure>
+                    <figure class="img4">
+                      <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img4-pc.d004af5c.jpg" alt />
+                      <figcaption>INSPIRATION</figcaption>
+                    </figure>
+                    <canvas id="aboutusArea11Canvas4" width="1000" height="1000"></canvas>
+                    <canvas id="aboutusArea11Canvas5" width="1000" height="1000"></canvas>
+                  </div>
+                  <!-- </div> -->
+                </div>
+
+
+                <div class="area11">
+                  <div class="container">
+                    <div class="vid-wrap vid1">
+                      <video preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
+                        <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video1-pc.05d7b769.mp4" type="video/mp4" />
+                      </video>
+                      <div class="txt-box box1">
+                        <p class="txt1">Method (1)</p>
+                        <p class="txt2">MOTIVATION</p>
+                        <canvas id="aboutusArea12Canvas1" width="80" height="80"></canvas>
+                        <p class="txt3">We create with a fuel injection of ‘motivation.’</p>
+                        <p class="txt4">창조는 ‘동기’라는 연료 주입으로 시작됩니다.</p>
+                      </div>
+                    </div>
+                    <div class="vid-wrap vid2">
+                      <video preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
+                        <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video2-pc.005a7177.mp4" type="video/mp4" />
+                      </video>
+                      <div class="txt-box box2">
+                        <p class="txt1">Method (2)</p>
+                        <p class="txt2">EXTREME</p>
+                        <canvas id="aboutusArea12Canvas2" width="80" height="80"></canvas>
+                        <p class="txt3">We think fiercely as the ‘extreme’ movement of pistons in an engine.</p>
+                        <p class="txt4">‘극한의’ 피스톤 움직임처럼 우리는 치열하게 사고합니다.</p>
+                      </div>
+                    </div>
+                    <div class="vid-wrap vid3">
+                      <video preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
+                        <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video3-pc.3a27b9e7.mp4" type="video/mp4" />
+                      </video>
+                      <div class="txt-box box3">
+                        <p class="txt1">Method (3)</p>
+                        <p class="txt2">PRACTICAL</p>
+                        <canvas id="aboutusArea12Canvas3" width="80" height="80"></canvas>
+                        <p class="txt3">We convert dynamic movements into ‘practical’ energy.</p>
+                        <p class="txt4">역동적인 움직임은 ‘실용적’인 에너지로 변환됩니다.</p>
+                      </div>
+                    </div>
+                    <div class="vid-wrap vid4">
+                      <video class="pc-only" preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
+                        <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video4-pc.03f6baa5.mp4" type="video/mp4" />
+                      </video>
+                      <div class="txt-box box4">
+                        <p class="txt1">Method (4)</p>
+                        <p class="txt2">SOLUTION</p>
+                        <canvas id="aboutusArea12Canvas4" width="80" height="80"></canvas>
+                        <p class="txt3">We provide you with the best ‘solution’ through optimal methods.</p>
+                        <p class="txt4">최적의 방법을 통해 최선의 ‘솔루션’을 제공합니다.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div class="stiky-area">
-                <div class="innnner">
-                  <div class="area10">
-                    <!-- <div class="horizon"> -->
-                      <div class="container con1">
-                        <div class="set-box set1">
-                          <p class="set-head">CYLNDR<br />CORP.</p>
-                          <span class="set-other first">CYLNDR CONVERTS BRAND POTENTIAL INTO TRENDSETTING ENERGY TO POWER<br />GLOBAL MARKETS AND CULTURES AT FULL THROTTLE.</span>
-                        </div>
-                        <div class="set-box set2">
-                          <p class="set-head">METHOD&<br />IDENTITY</p>
-                          <figure class="img1">
-                            <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img1-pc.7aa73891.jpg" alt />
-                            <figcaption>OUR OFFICE</figcaption>
-                          </figure>
-                        </div>
-                        <canvas id="aboutusArea11Canvas1" width="1000" height="1000"></canvas>
-                        <canvas id="aboutusArea11Canvas2" width="1000" height="1000"></canvas>
-                      </div>
-                      <div class="container con2">
-                        <div class="set-box set3">
-                          <div class="span-box">
-                            <span class="set-other">
-                              The digital environment and technology are changing<br />
-                              rapidly, and yesterday's knowledge cannot beat today's<br />
-                              competitors. We boldly challenge new proposals based<br />
-                              on our expertise and diverse experience in digital<br />
-                              technology and marketing trends.
-                            </span>
-                            <span class="set-other1">
-                              디지털 환경과 기술은 빠르게 변화하고 있고, 어제의 지식으로는 오늘의 경쟁자를<br />
-                              이길 수 없습니다. 우리는 디지털 기술과 마케팅 트렌드에 대한 전문 지식과 다양한<br />
-                              경험을 바탕으로 새로운 제안에 과감히 도전합니다.
-                            </span>
-                          </div>
-                          <p class="set-head">CREATIVE<br /><small>(2020)</small>EXPERTS</p>
-                        </div>
-                        <figure class="img2">
-                          <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img2-pc.c5461f75.jpg" alt />
-                          <figcaption>RELAXED ENVIRONMENT</figcaption>
-                        </figure>
-                        <canvas id="aboutusArea11Canvas3" width="1000" height="1000"></canvas>
-                      </div>
-                      <div class="container con3">
-                        <div class="set-box set4">
-                          <p class="set-head">
-                            <span>SALES</span>
-                            <span>DRIVEN</span>
-                            <span>MARKETING</span>
-                          </p>
-                          <div class="span-box">
-                            <span class="set-other">
-                              CYLNDR’s optimized production of Sales Driven<br />
-                              Marketing content aims to substantially help to growth<br />
-                              of our clients’ businesses.
-                            </span>
-                            <span class="set-other1">
-                              실린더가 최적화의 제작 프로세스로 만들어내는 Sales Driven Marketing<br />
-                              콘텐츠들은 클라이언트의 비즈니스 성장에 실질적인 도움을 주는 것을 목표로 합니다.
-                            </span>
-                          </div>
-                        </div>
-                        <figure class="img3">
-                          <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img3-pc.ba19f456.jpg" alt />
-                          <figcaption>IDEATION</figcaption>
-                        </figure>
-                        <figure class="img4">
-                          <img src="http://cylndr.co.kr/assets/images/aboutus-area11-img4-pc.d004af5c.jpg" alt />
-                          <figcaption>INSPIRATION</figcaption>
-                        </figure>
-                        <canvas id="aboutusArea11Canvas4" width="1000" height="1000"></canvas>
-                        <canvas id="aboutusArea11Canvas5" width="1000" height="1000"></canvas>
-                      </div>
-                    <!-- </div> -->
-                  </div>
-
-                  <div class="area11">
-                    <div class="container">
-                      <div class="vid-wrap">
-                        <video preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
-                          <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video1-pc.05d7b769.mp4" type="video/mp4" />
-                        </video>
-                        <div class="txt-box box1">
-                          <p class="txt1">Method (1)</p>
-                          <p class="txt2">MOTIVATION</p>
-                          <canvas id="aboutusArea12Canvas1" width="80" height="80"></canvas>
-                          <p class="txt3">We create with a fuel injection of ‘motivation.’</p>
-                          <p class="txt4">창조는 ‘동기’라는 연료 주입으로 시작됩니다.</p>
-                        </div>
-                      </div>
-                      <div class="vid-wrap">
-                        <video preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
-                          <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video2-pc.005a7177.mp4" type="video/mp4" />
-                        </video>
-                        <div class="txt-box box2">
-                          <p class="txt1">Method (2)</p>
-                          <p class="txt2">EXTREME</p>
-                          <canvas id="aboutusArea12Canvas2" width="80" height="80"></canvas>
-                          <p class="txt3">We think fiercely as the ‘extreme’ movement of pistons in an engine.</p>
-                          <p class="txt4">‘극한의’ 피스톤 움직임처럼 우리는 치열하게 사고합니다.</p>
-                        </div>
-                      </div>
-                      <div class="vid-wrap">
-                        <video preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
-                          <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video3-pc.3a27b9e7.mp4" type="video/mp4" />
-                        </video>
-                        <div class="txt-box box3">
-                          <p class="txt1">Method (3)</p>
-                          <p class="txt2">PRACTICAL</p>
-                          <canvas id="aboutusArea12Canvas3" width="80" height="80"></canvas>
-                          <p class="txt3">We convert dynamic movements into ‘practical’ energy.</p>
-                          <p class="txt4">역동적인 움직임은 ‘실용적’인 에너지로 변환됩니다.</p>
-                        </div>
-                      </div>
-                      <div class="vid-wrap">
-                        <video class="pc-only" preload="metadata" loop="" muted="" playsinline="" autoplay="" width="1920" height="1080">
-                          <source src="http://cylndr.co.kr/assets/videos/aboutus-area12-video4-pc.03f6baa5.mp4" type="video/mp4" />
-                        </video>
-                        <div class="txt-box box4">
-                          <p class="txt1">Method (4)</p>
-                          <p class="txt2">SOLUTION</p>
-                          <canvas id="aboutusArea12Canvas4" width="80" height="80"></canvas>
-                          <p class="txt3">We provide you with the best ‘solution’ through optimal methods.</p>
-                          <p class="txt4">최적의 방법을 통해 최선의 ‘솔루션’을 제공합니다.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
             </div>
-
-
-
             <div class="area12">
               <p class="top-txt">
                 MEMBERS
@@ -544,11 +584,11 @@
                 <span class="font">(CYLNDR SEOUL)</span>
               </p>
               <div class="img-box">
-                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/1.641e3dd9.jpg" alt class="zzz">
-                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/2.4a52ce86.jpg" alt>
-                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/4.7ed78022.jpg" alt>
-                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/6.7dcea7f9.jpg" alt>
-                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/8.a9b70943.jpg" alt>
+                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/1.641e3dd9.jpg" alt class="zzz" />
+                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/2.4a52ce86.jpg" alt />
+                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/4.7ed78022.jpg" alt />
+                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/6.7dcea7f9.jpg" alt />
+                <img src="http://cylndr.co.kr/assets/images/aboutus-area13-image-pc/8.a9b70943.jpg" alt />
               </div>
               <div class="deco-txt">
                 <p class="thx">THANKS</p>
@@ -571,14 +611,9 @@
             </div>
             <div class="area13">
               <div class="txt-box">
-                <div class="line1">
-                  <span class="word">
-                    Everyone at CYLNDR is a
-                </div>
+                <div class="line1"><span class="word">Everyone at CYLNDR is a</span></div>
                 <div class="line2"><span class="green">'creator.’</span> Our work communicating,</div>
-                <div class="line3">
-                  planning, and designing becomes our
-                </div>
+                <div class="line3">planning, and designing becomes our</div>
                 <div class="line4">mission. Our work <span class="green">inspires us</span></div>
                 <div class="line5">to be more creative.</div>
                 <p class="others">실린더의 모든 구성원은 '크리에이터'입니다. 커뮤니케이션/기획/디자인 등 모든<br />활동은 우리에게 미션이 되고 동기가 되어 크리에이티브를 이끌어냅니다.</p>
@@ -610,27 +645,13 @@
                 <figcaption>ATTEMPTS</figcaption>
               </figure>
               <div class="txt-box">
-                <div class="line1">
-                  <span class="word">CYLNDR</span> <span>thinks</span> <span class="green">fiercely</span> <span>and</span>
-                </div>
-                <div class="line2">
-                  <span class="green">dynamically</span><span>.</span> <span>We</span> <span>analyze</span> <span>the</span> <span>client's</span>
-                </div>
-                <div class="line3">
-                  <span>message</span> <span>from</span> <span>all</span> <span>dimensions,</span> <span>we</span>
-                </div>
-                <div class="line4">
-                  <span>provide</span> <span class="green">flexible</span> <span>and</span> <span class="green">continuous</span>
-                </div>
-                <div class="line5">
-                  <span class="green">solutions</span> <span>from</span> <span>planning</span> <span>of</span> <span>the</span> <span>content</span>
-                </div>
-                <div class="line6">
-                  <span>to</span> <span>the</span> <span>production,</span> <span>management,</span> <span>and</span>
-                </div>
-                <div class="line7">
-                  <span>result</span> <span>analysis.</span>
-                </div>
+                <div class="line1"><span class="word">CYLNDR</span> <span>thinks</span> <span class="green">fiercely</span> <span>and</span></div>
+                <div class="line2"><span class="green">dynamically</span><span>.</span> <span>We</span> <span>analyze</span> <span>the</span> <span>client's</span></div>
+                <div class="line3"><span>message</span> <span>from</span> <span>all</span> <span>dimensions,</span> <span>we</span></div>
+                <div class="line4"><span>provide</span> <span class="green">flexible</span> <span>and</span> <span class="green">continuous</span></div>
+                <div class="line5"><span class="green">solutions</span> <span>from</span> <span>planning</span> <span>of</span> <span>the</span> <span>content</span></div>
+                <div class="line6"><span>to</span> <span>the</span> <span>production,</span> <span>management,</span> <span>and</span></div>
+                <div class="line7"><span>result</span> <span>analysis.</span></div>
                 <p class="others">
                   실린더는 치열하게 고민하고 역동적으로 사고합니다. 클라이언트의 메시지를<br />
                   입체적으로 분석하고, 콘텐츠 기획부터 제작, 관리, 결과 분석까지의 과정에 있어 끊김<br />없고 유연한 솔루션을 제공합니다.
@@ -640,7 +661,7 @@
           </div>
         </section>
 
-        <section class="sc-work">
+        <section class="sc-work" id="sc-work">
           <div class="tit-box">
             <div class="main-tit">
               <h2 class="headline">Work</h2>
@@ -677,7 +698,7 @@
             </li>
           </ul>
         </section>
-        <section class="sc-recuit">
+        <section class="sc-recuit" id="sc-recruit">
           <div class="container">
             <div class="main-txt">
               <h2 class="headline">
@@ -734,9 +755,7 @@
             Looking for a creative company? <br />
             Contact Us.
           </p>
-          <p class="mid-txt">
-            LET’S GET CONNECTED
-          </p>
+          <p class="mid-txt">LET’S GET CONNECTED</p>
           <p class="bottom-txt">
             <span>© 2022, CYLNDR SEOUL</span>
             <a href="#header">(back to the top)</a>
